@@ -61,17 +61,6 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="dataProveedorBean">
-<xs:complexContent>
-<xs:extension base="tns:dataUsuario">
-<xs:sequence>
-<xs:element name="nombre_empresa" type="xs:string" minOccurs="0"></xs:element>
-<xs:element name="url" type="xs:string" minOccurs="0"></xs:element>
-</xs:sequence>
-</xs:extension>
-</xs:complexContent>
-</xs:complexType>
-
 <xs:complexType name="dataUsuario" abstract="true">
 <xs:sequence>
 <xs:element name="nickname_" type="xs:string" minOccurs="0"></xs:element>
@@ -81,6 +70,17 @@
 <xs:element name="fecha_" type="xs:dateTime" minOccurs="0"></xs:element>
 <xs:element name="img_" type="xs:string" minOccurs="0"></xs:element>
 </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dataProveedorBean">
+<xs:complexContent>
+<xs:extension base="tns:dataUsuario">
+<xs:sequence>
+<xs:element name="nombre_empresa" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="url" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
 </xs:complexType>
 
 <xs:complexType name="dataCliente">
