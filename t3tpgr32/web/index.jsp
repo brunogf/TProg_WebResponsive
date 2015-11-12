@@ -8,6 +8,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="refresh" content="0;URL='/t3tpgr32/WEB-INF/Templates/IniciarSesion'"/>
+        <meta http-equiv="refresh" content="0;URL='http://localhost:8080/t3tpgr32/IniciarSesion.jsp'"/>
     </head>
 </html>
