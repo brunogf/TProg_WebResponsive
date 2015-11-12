@@ -10,4 +10,4 @@
 <link rel="stylesheet" href="media/bootstrap/css/bootstrap.min.css">
 <script src="media/bootstrap/js/jquery.min.js"></script>
 <script src="media/bootstrap/js/bootstrap.min.js"></script>
-<title>Help4Traveling</title>
+<title>Help4TravelingMovil</title>
