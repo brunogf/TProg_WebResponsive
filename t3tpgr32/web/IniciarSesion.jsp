@@ -16,12 +16,12 @@
 
       <div class="container">
 
-        <form class="form-signin">
+          <form class="form-signin" action="IniciarSesion" method="POST">
           <h2 class="form-signin-heading">Iniciar Sesion</h2>
-          <label for="inputEmail" class="sr-only">Email address o nickname</label>
-          <input type="email" id="inputEmail" class="form-control" placeholder="Email address o nickname" required autofocus>
-          <label for="inputPassword" class="sr-only">Password</label>
-          <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+          <label for="Usuario" class="sr-only">Email address o nickname</label>
+          <input name="Usuario" id="Usuario" class="form-control" placeholder="Email address o nickname" required autofocus>
+          <label for="Pass" class="sr-only">Password</label>
+          <input name="Pass" type="password" id="Pass" class="form-control" placeholder="Password" required>
           <div class="checkbox">
             <label>
               <input type="checkbox" value="remember-me"> Remember me

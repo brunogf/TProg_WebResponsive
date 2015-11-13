@@ -5,18 +5,23 @@
  */
 
 import Servidor.PublicadorControladorUsuario;
+import com.h4t.modelo.EstadoSesion;
+import com.h4t.servicios.DataCliente;
+import com.h4t.servicios.DataUsuario;
 import com.h4t.servicios.PublicadorControladorUsuarioService;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import tpgr32.DataProveedor;
 
 /**
  *
  * @author piñe
  */
+@WebServlet(name = "IniciarSesion", urlPatterns = {"/IniciarSesion"})
 public class IniciarSesion extends HttpServlet {
 
     /**
@@ -33,9 +38,39 @@ public class IniciarSesion extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         
         PublicadorControladorUsuarioService servicio = new PublicadorControladorUsuarioService();
-        PublicadorControladorUsuario port = servicio.getPublicadorControladorUsuarioPort();
+        com.h4t.servicios.PublicadorControladorUsuario port = servicio.getPublicadorControladorUsuarioPort();
         
+        String usr = request.getParameter("Usuario");
+        DataUsuario du;
+        du = port.infoUsuario(port.getNickUsuario(usr));
         
+        if ((du != null) && (!(du instanceof DataCliente))){
+        switch (port.comprobarUsuario(usr, request.getParameter("Pass")))
+        {
+            case 0://TODO OK
+                {
+                
+                request.getSession().setAttribute("Usuario", du.getNickname());
+                request.getSession().setAttribute("estado_sesion", EstadoSesion.LOGGED_IN);
+                String nombre = du.getNombre() + " " + du.getApellido();
+                request.getSession().setAttribute("Nombre", nombre);              
+                request.getRequestDispatcher("Home.jsp").forward(request, response);
+                }
+                break;
+            case 1:
+                {
+                    request.getSession().setAttribute("estado_sesion", EstadoSesion.INVALID_LOGIN);
+                    response.sendRedirect("");//redirecciona al inicio
+                }
+                break;
+            case 2:
+                {
+                    request.getSession().setAttribute("estado_sesion", EstadoSesion.INVALID_LOGIN);
+                    response.sendRedirect("");//redirecciona al inicio
+                }
+                break;
+        }
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
