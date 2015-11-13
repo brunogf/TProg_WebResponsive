@@ -40,21 +40,26 @@ public class IniciarSesion extends HttpServlet {
         com.h4t.servicios.PublicadorControladorUsuario port = servicio.getPublicadorControladorUsuarioPort();
         
         String usr = request.getParameter("Usuario");
-        DataUsuario du;
-        du = port.infoUsuario(port.getNickUsuario(usr));
-        
-        if ((du != null) && (!(du instanceof DataCliente))){
+
         switch (port.comprobarUsuario(usr, request.getParameter("Pass")))
         {
             case 0://TODO OK
                 {
-                
-                request.getSession().setAttribute("Usuario", du.getNickname());
-                request.getSession().setAttribute("estado_sesion", EstadoSesion.LOGGED_IN);
-                String nombre = du.getNombre() + " " + du.getApellido();
-                request.getSession().setAttribute("Nombre", nombre);              
-                request.getRequestDispatcher("Home.jsp").forward(request, response);
+                DataUsuario du;
+                du = port.infoUsuario(port.getNickUsuario(usr));
+                if (( du != null) && (!(du instanceof DataCliente))){
+                  request.getSession().setAttribute("Usuario", du.getNickname());
+                  request.getSession().setAttribute("estado_sesion", EstadoSesion.LOGGED_IN);
+                  String nombre = du.getNombre() + " " + du.getApellido();
+                  request.getSession().setAttribute("Nombre", nombre);              
+                  request.getRequestDispatcher("Home.jsp").forward(request, response);
+                  }
+                else{
+                    request.getSession().setAttribute("estado_sesion", EstadoSesion.INVALID_LOGIN);
+                    response.sendRedirect("");//redirecciona al inicio
                 }
+                    
+                }   
                 break;
             case 1:
                 {
@@ -69,7 +74,7 @@ public class IniciarSesion extends HttpServlet {
                 }
                 break;
         }
-        }
+            
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

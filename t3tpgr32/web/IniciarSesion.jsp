@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="com.h4t.modelo.EstadoSesion"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,6 +23,14 @@
           <input name="Usuario" id="Usuario" class="form-control" placeholder="Email address o nickname" required autofocus>
           <label for="Pass" class="sr-only">Password</label>
           <input name="Pass" type="password" id="Pass" class="form-control" placeholder="Password" required>
+          <%  
+            if(session.getAttribute("estado_sesion") == EstadoSesion.INVALID_LOGIN)
+            {%>
+            <span class="invalid_login_message">Usuario o contraseña incorrecto.</span>
+            <%
+            session.setAttribute("estado_sesion", EstadoSesion.NOT_LOGGED_IN);
+            }    
+        %>
           <div class="checkbox">
             <label>
               <input type="checkbox" value="remember-me"> Remember me

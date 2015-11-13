@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="media/bootstrap/css/bootstrap.min.css">
 <script src="media/bootstrap/js/bootstrap.min.js"></script>
 <script src="media/bootstrap/js/jquery.min.js"></script>
+<link rel="stylesheet" href="media/estilos.css">
 <header>
     <div class="container">
         <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
