@@ -13,6 +13,8 @@
     </head>
     <body>
         <h1>Home</h1>
-        <p>Esto es el home</p>
+        <p>Home de prueba</p>
+        <button class="btn btn-primary" type="button" onclick="location.href='CerrarSesion'">Cerrar Sesion</button>
+        
     </body>
 </html>
