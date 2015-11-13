@@ -12,10 +12,68 @@
       <jsp:include page="WEB-INF/Templates/head.jsp"/>
     </head>
     <body>
-        <jsp:include page="WEB-INF/Templates/header.jsp"/>
-        <h1>Home</h1>
-        <p>Home de prueba</p>
-        <button class="btn btn-primary" type="button" onclick="location.href='CerrarSesion'">Cerrar Sesion</button>
+        
+        <div class="container">
+            <div class="row">
+                <jsp:include page="WEB-INF/Templates/header.jsp"/>
+            </div>
+            
+            <div clas="row">
+            <br>
+            <br>
+            <div class="main col-xs-5 col-sm-7 col-md-10">
+            <h1>Home de prueba</h1>
+            <p>asssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaddfdsfasdfasdfasdfasdfsdf
+            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaff
+            edgedfgasfgsdfgsdfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggdsg
+            sadgsadgsaaaaaaaaadsdfgdfgdsfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+            </p>
+            <p>asssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaddfdsfasdfasdfasdfasdfsdf
+            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaff
+            edgedfgasfgsdfgsdfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggdsg
+            sadgsadgsaaaaaaaaadsdfgdfgdsfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+            </p>
+            <p>asssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaddfdsfasdfasdfasdfasdfsdf
+            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaff
+            edgedfgasfgsdfgsdfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggdsg
+            sadgsadgsaaaaaaaaadsdfgdfgdsfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+            </p>
+            <p>asssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaddfdsfasdfasdfasdfasdfsdf
+            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaff
+            edgedfgasfgsdfgsdfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggdsg
+            sadgsadgsaaaaaaaaadsdfgdfgdsfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+            </p>
+            <p>asssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaddfdsfasdfasdfasdfasdfsdf
+            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaff
+            edgedfgasfgsdfgsdfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggdsg
+            sadgsadgsaaaaaaaaadsdfgdfgdsfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+            </p>
+            <p>asssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaddfdsfasdfasdfasdfasdfsdf
+            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaff
+            edgedfgasfgsdfgsdfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggdsg
+            sadgsadgsaaaaaaaaadsdfgdfgdsfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+            </p>
+            <p>asssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaddfdsfasdfasdfasdfasdfsdf
+            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaff
+            edgedfgasfgsdfgsdfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggdsg
+            sadgsadgsaaaaaaaaadsdfgdfgdsfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+            </p>
+            <p>asssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaddfdsfasdfasdfasdfasdfsdf
+            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaff
+            edgedfgasfgsdfgsdfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggdsg
+            sadgsadgsaaaaaaaaadsdfgdfgdsfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+            </p>
+            </div>
+            </div>
+        </div>
         
     </body>
 </html>
