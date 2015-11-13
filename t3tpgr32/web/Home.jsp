@@ -12,6 +12,7 @@
       <jsp:include page="WEB-INF/Templates/head.jsp"/>
     </head>
     <body>
+        <jsp:include page="WEB-INF/Templates/header.jsp"/>
         <h1>Home</h1>
         <p>Home de prueba</p>
         <button class="btn btn-primary" type="button" onclick="location.href='CerrarSesion'">Cerrar Sesion</button>
