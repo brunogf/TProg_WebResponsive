@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-import Servidor.PublicadorControladorUsuario;
+import com.h4t.servicios.PublicadorControladorUsuario;
 import com.h4t.modelo.EstadoSesion;
 import com.h4t.servicios.DataCliente;
 import com.h4t.servicios.DataUsuario;
@@ -15,7 +15,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import tpgr32.DataProveedor;
 
 /**
  *
