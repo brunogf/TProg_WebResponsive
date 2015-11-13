@@ -8,7 +8,7 @@ and open the template in the editor.
     Author     : piñe
 */
 
-header .invalid_login_message{
+.IniciarSesion .invalid_login_message{
     font-size: 13px;
     color: red;
 }

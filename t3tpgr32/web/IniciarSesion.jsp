@@ -15,7 +15,7 @@
     
     <body>
 
-      <div class="container">
+      <div class="container IniciarSesion">
 
           <form class="form-signin col-xs-12 col-md-6 col-md-offset-3 " action="IniciarSesion" method="POST">
           <h2 class="form-signin-heading">Iniciar Sesion</h2>
