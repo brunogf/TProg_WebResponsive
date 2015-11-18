@@ -7,6 +7,7 @@
 import com.h4t.servicios.PublicadorControladorUsuario;
 import com.h4t.modelo.EstadoSesion;
 import com.h4t.servicios.DataCliente;
+import com.h4t.servicios.DataProveedorBean;
 import com.h4t.servicios.DataUsuario;
 import com.h4t.servicios.PublicadorControladorUsuarioService;
 import java.io.IOException;
@@ -47,7 +48,7 @@ public class IniciarSesion extends HttpServlet {
                 {
                 DataUsuario du;
                 du = port.infoUsuario(port.getNickUsuario(usr));
-                if (( du != null) && (!(du instanceof DataCliente))){
+                if (du instanceof DataProveedorBean){
                   request.getSession().setAttribute("Usuario", du.getNickname());
                   request.getSession().setAttribute("estado_sesion", EstadoSesion.LOGGED_IN);
                   String nombre = du.getNombre() + " " + du.getApellido();
