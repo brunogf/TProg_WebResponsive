@@ -18,7 +18,7 @@
                 <jsp:include page="WEB-INF/Templates/header.jsp"/>
             </div>
             
-            <div clas="row">
+            <div class="row">
             <br>
             <br>
             <div class="main col-xs-5 col-sm-7 col-md-10">

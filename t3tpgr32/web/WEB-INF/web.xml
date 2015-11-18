@@ -8,6 +8,14 @@
         <servlet-name>CerrarSesion</servlet-name>
         <servlet-class>com.h4t.controladores.CerrarSesion</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Servicios</servlet-name>
+        <servlet-class>com.h4t.controladores.Servicios</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>InfoServicio</servlet-name>
+        <servlet-class>com.h4t.controladores.InfoServicio</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Inicio</servlet-name>
         <url-pattern>/Inicio</url-pattern>
@@ -15,6 +23,14 @@
     <servlet-mapping>
         <servlet-name>CerrarSesion</servlet-name>
         <url-pattern>/CerrarSesion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Servicios</servlet-name>
+        <url-pattern>/Servicios</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InfoServicio</servlet-name>
+        <url-pattern>/InfoServicio</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
