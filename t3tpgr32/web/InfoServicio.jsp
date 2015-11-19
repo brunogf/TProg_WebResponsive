@@ -31,13 +31,13 @@
                 <label>Descripcion:</label><%=info_servicio.getDescripcion()%>
                 <br/>
                 <% if (imagen0 != null){ %>
-                    <img src="<%=imagen0%>" width="300px" height="200px" alt="Imagen Servicio"><%;
+                    <img class="imagen0" src="<%=imagen0%>" width="300px" height="200px" alt="Imagen Servicio"><%;
                 }%>
                 <% if (imagen1 != null){ %>
-                    <img src="<%=imagen1%>" width="300px" height="200px" alt="Imagen Servicio"><%;
+                    <img class="imagen1" src="<%=imagen1%>" width="300px" height="200px" alt="Imagen Servicio"><%;
                 }%>
                 <% if (imagen2 != null){ %>
-                    <img src="<%=imagen2%>" width="300px" height="200px" alt="Imagen Servicio"><%;
+                    <img class="imagen2"src="<%=imagen2%>" width="300px" height="200px" alt="Imagen Servicio"><%;
                 }%>
         </div>
     </body>

@@ -20,13 +20,11 @@ body{
 .Home{
     width: 80%;
     background: #ffffff;
-    box-sizing: border-box;
 }
 
 .main{
     width: 70%;
     background: #ffffff;
-    box-sizing: border-box;
 }
 
 .Servicios{
@@ -52,4 +50,8 @@ body{
 .ReservasProveedor{
     width: 80%;
     background: #ffffff;
+}
+
+img{
+    width: 30%;
 }
