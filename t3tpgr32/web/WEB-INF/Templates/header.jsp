@@ -29,7 +29,7 @@
       <ul class="nav navbar-nav">
           <li><a href="Servicios">Servicios</a></li>
         <li><a href="Promociones">Promociones</a></li>
-        <li><a href="#">Reservas</a></li>
+        <li><a href="ReservasProveedor">Reservas</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="CerrarSesion">Cerrar Sesion</a></li>

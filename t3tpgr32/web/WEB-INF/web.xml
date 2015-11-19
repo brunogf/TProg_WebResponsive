@@ -24,6 +24,14 @@
         <servlet-name>InfoPromocion</servlet-name>
         <servlet-class>com.h4t.controladores.InfoPromocion</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ReservasProveedor</servlet-name>
+        <servlet-class>com.h4t.controladores.ReservasProveedor</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>InfoReserva</servlet-name>
+        <servlet-class>com.h4t.controladores.InfoReserva</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Inicio</servlet-name>
         <url-pattern>/Inicio</url-pattern>
@@ -47,6 +55,14 @@
     <servlet-mapping>
         <servlet-name>InfoPromocion</servlet-name>
         <url-pattern>/InfoPromocion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReservasProveedor</servlet-name>
+        <url-pattern>/ReservasProveedor</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InfoReserva</servlet-name>
+        <url-pattern>/InfoReserva</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
