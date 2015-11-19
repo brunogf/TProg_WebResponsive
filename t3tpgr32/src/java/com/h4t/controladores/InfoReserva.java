@@ -5,6 +5,7 @@
  */
 package com.h4t.controladores;
 
+import com.h4t.servicios.DataReserva;
 import com.h4t.servicios.PublicadorControladorReserva;
 import com.h4t.servicios.PublicadorControladorReservaService;
 import java.io.IOException;
@@ -13,7 +14,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import java.util.List;
+import java.util.ArrayList;
 /**
  *
  * @author Bruno González
@@ -32,9 +34,11 @@ public class InfoReserva extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         int nro = Integer.parseInt((String)request.getParameter("nro"));
+        String nick = (String) request.getSession().getAttribute("Usuario");
+        
         PublicadorControladorReservaService servicio = new PublicadorControladorReservaService();
-        PublicadorControladorReserva port = servicio.getPublicadorControladorReservaPort();  
-        request.setAttribute("info_reserva_dr", port.infoReserva(nro));
+        PublicadorControladorReserva port = servicio.getPublicadorControladorReservaPort();
+        request.setAttribute("info_reserva_dr", port.infoReservaProveedor(nro, nick));
         request.setAttribute("info_reserva_fac", port.obtenerFacturaReserva(nro));
         request.getRequestDispatcher("/InfoReserva.jsp").forward(request, response);
     }
