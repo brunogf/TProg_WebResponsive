@@ -8,7 +8,48 @@ and open the template in the editor.
     Author     : piñe
 */
 
+body{
+    background:#E4F3FE;
+}
+
 .IniciarSesion .invalid_login_message{
     font-size: 13px;
     color: red;
+}
+
+.Home{
+    width: 80%;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+.main{
+    width: 70%;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+.Servicios{
+    width: 80%;
+    background: #ffffff;
+}
+
+.Promociones{
+    width: 80%;
+    background: #ffffff;
+}
+
+.infoPromocion{
+    width: 80%;
+    background: #ffffff;
+}
+
+.infoServicio{
+    width: 80%;
+    background: #ffffff;
+}
+
+.ReservasProveedor{
+    width: 80%;
+    background: #ffffff;
 }

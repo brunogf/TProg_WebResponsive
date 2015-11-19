@@ -39,6 +39,12 @@
 <message name="ParseException">
 <part name="fault" element="tns:ParseException"></part>
 </message>
+<message name="obtenerFacturaReserva">
+<part name="arg0" type="xsd:int"></part>
+</message>
+<message name="obtenerFacturaReservaResponse">
+<part name="return" type="xsd:int"></part>
+</message>
 <message name="getClienteReserva">
 <part name="arg0" type="xsd:int"></part>
 </message>
@@ -74,6 +80,10 @@
 <input wsam:Action="http://Servidor/PublicadorControladorReserva/cambiarFechaCreacionReservaRequest" message="tns:cambiarFechaCreacionReserva"></input>
 <output wsam:Action="http://Servidor/PublicadorControladorReserva/cambiarFechaCreacionReservaResponse" message="tns:cambiarFechaCreacionReservaResponse"></output>
 <fault message="tns:ParseException" name="ParseException" wsam:Action="http://Servidor/PublicadorControladorReserva/cambiarFechaCreacionReserva/Fault/ParseException"></fault>
+</operation>
+<operation name="obtenerFacturaReserva">
+<input wsam:Action="http://Servidor/PublicadorControladorReserva/obtenerFacturaReservaRequest" message="tns:obtenerFacturaReserva"></input>
+<output wsam:Action="http://Servidor/PublicadorControladorReserva/obtenerFacturaReservaResponse" message="tns:obtenerFacturaReservaResponse"></output>
 </operation>
 <operation name="getClienteReserva">
 <input wsam:Action="http://Servidor/PublicadorControladorReserva/getClienteReservaRequest" message="tns:getClienteReserva"></input>
@@ -136,6 +146,15 @@
 <fault name="ParseException">
 <soap:fault name="ParseException" use="literal"></soap:fault>
 </fault>
+</operation>
+<operation name="obtenerFacturaReserva">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Servidor/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Servidor/"></soap:body>
+</output>
 </operation>
 <operation name="getClienteReserva">
 <soap:operation soapAction=""></soap:operation>

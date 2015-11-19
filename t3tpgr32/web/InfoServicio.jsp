@@ -14,7 +14,7 @@
         <jsp:include page="WEB-INF/Templates/head.jsp"/>
     </head>
     <body>
-        <div class="container">
+        <div class="container infoServicio">
             <div class="row">
                     <jsp:include page="WEB-INF/Templates/header.jsp"/>
             </div>
