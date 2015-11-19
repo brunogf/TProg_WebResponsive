@@ -18,7 +18,7 @@
         <jsp:include page="WEB-INF/Templates/head.jsp"/>
     </head>
     <body>
-        <%--<jsp:include page="WEB-INF/Templates/header.jsp"/>--%>
+        <jsp:include page="WEB-INF/Templates/header.jsp"/>
 
         <div class="container ReservasProveedor">
             <div class="row">

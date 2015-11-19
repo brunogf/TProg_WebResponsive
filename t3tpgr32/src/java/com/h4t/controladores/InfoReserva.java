@@ -5,6 +5,7 @@
  */
 package com.h4t.controladores;
 
+import com.h4t.modelo.EstadoSesion;
 import com.h4t.servicios.DataReserva;
 import com.h4t.servicios.PublicadorControladorReserva;
 import com.h4t.servicios.PublicadorControladorReservaService;
@@ -16,6 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 import java.util.ArrayList;
+
 /**
  *
  * @author Bruno González
@@ -33,16 +35,19 @@ public class InfoReserva extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        int nro = Integer.parseInt((String)request.getParameter("nro"));
-        String nick = (String) request.getSession().getAttribute("Usuario");
-        
-        PublicadorControladorReservaService servicio = new PublicadorControladorReservaService();
-        PublicadorControladorReserva port = servicio.getPublicadorControladorReservaPort();
-        request.setAttribute("info_reserva_dr", port.infoReservaProveedor(nro, nick));
-        request.setAttribute("info_reserva_fac", port.obtenerFacturaReserva(nro));
-        request.getRequestDispatcher("/InfoReserva.jsp").forward(request, response);
+        int nro = Integer.parseInt((String) request.getParameter("nro"));
+
+        if (request.getSession().getAttribute("estado_sesion") == EstadoSesion.LOGGED_IN) {
+            String nick = (String) request.getSession().getAttribute("Usuario");
+            PublicadorControladorReservaService servicio = new PublicadorControladorReservaService();
+            PublicadorControladorReserva port = servicio.getPublicadorControladorReservaPort();
+            request.setAttribute("info_reserva_dr", port.infoReservaProveedor(nro, nick));
+            request.setAttribute("info_reserva_fac", port.obtenerFacturaReserva(nro));
+            request.getRequestDispatcher("/InfoReserva.jsp").forward(request, response);
+        }else{
+            response.sendRedirect("");
+        }
     }
-    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

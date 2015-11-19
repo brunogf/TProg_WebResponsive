@@ -5,6 +5,7 @@
  */
 package com.h4t.controladores;
 
+import com.h4t.modelo.EstadoSesion;
 import com.h4t.servicios.DataReserva;
 import com.h4t.servicios.DataReservaArray;
 import com.h4t.servicios.PublicadorControladorUsuarioService;
@@ -39,16 +40,19 @@ public class ReservasProveedor extends HttpServlet {
         PublicadorControladorUsuarioService servicio = new PublicadorControladorUsuarioService();
         com.h4t.servicios.PublicadorControladorUsuario port = servicio.getPublicadorControladorUsuarioPort();
 
-        String nick = (String) request.getSession().getAttribute("Usuario");
-        
-        List<DataReserva> reservas = port.listarReservasProveedor(nick).getItem();        
+        if (request.getSession().getAttribute("estado_sesion") == EstadoSesion.LOGGED_IN) {
+            String nick = (String) request.getSession().getAttribute("Usuario");
 
-        request.setAttribute("reservas", reservas);
-        request.getRequestDispatcher("/ListarReservas.jsp").forward(request, response);
+            List<DataReserva> reservas = port.listarReservasProveedor(nick).getItem();
+
+            request.setAttribute("reservas", reservas);
+            request.getRequestDispatcher("/ListarReservas.jsp").forward(request, response);
+        } else {
+            response.sendRedirect(""); //redirecciona al inicio
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-
     /**
      * Handles the HTTP <code>GET</code> method.
      *

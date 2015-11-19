@@ -22,6 +22,8 @@
         <jsp:include page="WEB-INF/Templates/head.jsp"/>
     </head>
     <body>
+        <jsp:include page="WEB-INF/Templates/header.jsp"/>
+        
         <% DataReserva dr = (DataReserva) request.getAttribute("info_reserva_dr");
             List<ParDPD> dpds = dr.getDpd();
             DecimalFormat decimales = new DecimalFormat("0");
