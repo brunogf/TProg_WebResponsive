@@ -28,7 +28,7 @@
     <div class="collapse navbar-collapse" id="navbar1-1">
       <ul class="nav navbar-nav">
           <li><a href="Servicios">Servicios</a></li>
-        <li><a href="#">Promociones</a></li>
+        <li><a href="Promociones">Promociones</a></li>
         <li><a href="#">Reservas</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">

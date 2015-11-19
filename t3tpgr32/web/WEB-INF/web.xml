@@ -16,6 +16,14 @@
         <servlet-name>InfoServicio</servlet-name>
         <servlet-class>com.h4t.controladores.InfoServicio</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Promociones</servlet-name>
+        <servlet-class>com.h4t.controladores.Promociones</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>InfoPromocion</servlet-name>
+        <servlet-class>com.h4t.controladores.InfoPromocion</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Inicio</servlet-name>
         <url-pattern>/Inicio</url-pattern>
@@ -31,6 +39,14 @@
     <servlet-mapping>
         <servlet-name>InfoServicio</servlet-name>
         <url-pattern>/InfoServicio</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Promociones</servlet-name>
+        <url-pattern>/Promociones</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InfoPromocion</servlet-name>
+        <url-pattern>/InfoPromocion</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

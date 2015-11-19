@@ -1,13 +1,12 @@
 <%-- 
-    Document   : Servicios
-    Created on : 17/11/2015, 05:39:32 PM
+    Document   : Promociones
+    Created on : 18/11/2015, 08:52:19 PM
     Author     : spesamosca
 --%>
 
-<%@page import="com.h4t.servicios.DataPublicacion"%>
-<%@page import="java.util.HashSet"%>
 <%@page import="java.util.Set"%>
-<%@page import="com.h4t.servicios.DataServicioBean"%>
+<%@page import="java.util.HashSet"%>
+<%@page import="com.h4t.servicios.DataPublicacion"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -18,10 +17,10 @@
     <body>
         <div class="container">
             <div class="row">
-                <jsp:include page="WEB-INF/Templates/header.jsp"/>               
+                <jsp:include page="WEB-INF/Templates/header.jsp"/>
             </div>            
             <div class="row">
-            <br>                    
+            <br>
             <br>
             <br>
             <div class="main col-xs-5 col-sm-7 col-md-10">
@@ -29,13 +28,13 @@
                                 <tr class="cabeceraTabla">
                                     <td>Nombre</td>                                  
                                 </tr>  
-                <%Set<DataPublicacion> Servicios =(HashSet) request.getAttribute("Servicios");%>
+                <%Set<DataPublicacion> Promociones =(HashSet) request.getAttribute("Promociones");%>
                 <%
-                if (!Servicios.isEmpty())
+                if (!Promociones.isEmpty())
                     {
                     String link;
-                    for (DataPublicacion ds : Servicios){
-                        link = "InfoServicio?Servicio=" + ds.getNombre();%>
+                    for (DataPublicacion ds : Promociones){
+                        link = "InfoPromocion?Promocion=" + ds.getNombre();%>
                         <tr class="result" onclick="location.href='<%=link%>'">
                         <td><%=ds.getNombre()%></td>
                         </tr>
