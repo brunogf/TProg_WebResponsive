@@ -6,6 +6,7 @@
 package com.h4t.controladores;
 
 import com.h4t.modelo.EstadoSesion;
+import com.h4t.modelo.FabricaWS;
 import com.h4t.servicios.DataReserva;
 import com.h4t.servicios.PublicadorControladorReserva;
 import com.h4t.servicios.PublicadorControladorReservaService;
@@ -43,6 +44,8 @@ public class InfoReserva extends HttpServlet {
             PublicadorControladorReserva port = servicio.getPublicadorControladorReservaPort();
             request.setAttribute("info_reserva_dr", port.infoReservaProveedor(nro, nick));
             request.setAttribute("info_reserva_fac", port.obtenerFacturaReserva(nro));
+            request.setAttribute("proveedor_facturo", port.proveedorFacturoReserva(nick, nro));
+            request.setAttribute("urlt2", FabricaWS.getInstance().getT2URL());
             request.getRequestDispatcher("/InfoReserva.jsp").forward(request, response);
         }else{
             response.sendRedirect("");

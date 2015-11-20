@@ -45,6 +45,20 @@
 <message name="obtenerFacturaReservaResponse">
 <part name="return" type="xsd:int"></part>
 </message>
+<message name="infoReservaProveedor">
+<part name="arg0" type="xsd:int"></part>
+<part name="arg1" type="xsd:string"></part>
+</message>
+<message name="infoReservaProveedorResponse">
+<part name="return" type="tns:dataReserva"></part>
+</message>
+<message name="proveedorFacturoReserva">
+<part name="arg0" type="xsd:string"></part>
+<part name="arg1" type="xsd:int"></part>
+</message>
+<message name="proveedorFacturoReservaResponse">
+<part name="return" type="xsd:boolean"></part>
+</message>
 <message name="getClienteReserva">
 <part name="arg0" type="xsd:int"></part>
 </message>
@@ -84,6 +98,14 @@
 <operation name="obtenerFacturaReserva">
 <input wsam:Action="http://Servidor/PublicadorControladorReserva/obtenerFacturaReservaRequest" message="tns:obtenerFacturaReserva"></input>
 <output wsam:Action="http://Servidor/PublicadorControladorReserva/obtenerFacturaReservaResponse" message="tns:obtenerFacturaReservaResponse"></output>
+</operation>
+<operation name="infoReservaProveedor" parameterOrder="arg0 arg1">
+<input wsam:Action="http://Servidor/PublicadorControladorReserva/infoReservaProveedorRequest" message="tns:infoReservaProveedor"></input>
+<output wsam:Action="http://Servidor/PublicadorControladorReserva/infoReservaProveedorResponse" message="tns:infoReservaProveedorResponse"></output>
+</operation>
+<operation name="proveedorFacturoReserva" parameterOrder="arg0 arg1">
+<input wsam:Action="http://Servidor/PublicadorControladorReserva/proveedorFacturoReservaRequest" message="tns:proveedorFacturoReserva"></input>
+<output wsam:Action="http://Servidor/PublicadorControladorReserva/proveedorFacturoReservaResponse" message="tns:proveedorFacturoReservaResponse"></output>
 </operation>
 <operation name="getClienteReserva">
 <input wsam:Action="http://Servidor/PublicadorControladorReserva/getClienteReservaRequest" message="tns:getClienteReserva"></input>
@@ -148,6 +170,24 @@
 </fault>
 </operation>
 <operation name="obtenerFacturaReserva">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Servidor/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Servidor/"></soap:body>
+</output>
+</operation>
+<operation name="infoReservaProveedor">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Servidor/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Servidor/"></soap:body>
+</output>
+</operation>
+<operation name="proveedorFacturoReserva">
 <soap:operation soapAction=""></soap:operation>
 <input>
 <soap:body use="literal" namespace="http://Servidor/"></soap:body>

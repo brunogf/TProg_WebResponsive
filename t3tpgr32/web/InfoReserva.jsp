@@ -4,6 +4,9 @@
     Author     : Bruno González
 --%>
 
+<%@page import="com.h4t.servicios.Estado"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.text.DateFormat"%>
 <%@page import="java.text.DecimalFormat"%>
 <%@page import="com.h4t.servicios.DataServicioBean"%>
 <%@page import="com.h4t.servicios.DataPromocion"%>
@@ -26,10 +29,33 @@
         <% DataReserva dr = (DataReserva) request.getAttribute("info_reserva_dr");
             List<ParDPD> dpds = dr.getDpd();
             DecimalFormat decimales = new DecimalFormat("0");
+            DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+            String fecha = df.format(dr.getCreacion().toGregorianCalendar().getTime());
         %>
 
         <div class="container InfoReserva">
             <br>
+            <br>
+            <div class="page-header">
+                <h2>Reserva Nº<%=dr.getNum()%></h2>
+            </div>
+            <br>
+            <div class="col-xs-offset-3 col-sm-offset-1 col-md-offset-1">
+                <span>Fecha creacion: </span>
+                <span><%=fecha%></span>
+                <br>
+                <span>Estado: </span>
+                <span><%=dr.getEstado().name().toLowerCase()%></span>
+                <%if((dr.getEstado() == Estado.PAGADA) && !((Boolean)request.getAttribute("proveedor_facturo"))){%>
+                <span> - </span>
+                <span class="btn-link facturarReserva" onclick="facturar(<%=dr.getNum()%>,'<%=request.getSession().getAttribute("Usuario")%>')"> Facturar</span>
+                <%}else if((dr.getEstado() == Estado.FACTURADA) && !((Boolean)request.getAttribute("proveedor_facturo")) && ((Integer)request.getAttribute("info_reserva_fac") != -1)){ %>
+                <%String str = (String)request.getAttribute("urlt2");
+                str = str +"/VerFactura?id=" + request.getAttribute("info_reserva_fac");%>
+                <span> - </span>
+                <span class="btn-link facturarReserva" onclick='window.open("<%=str%>")'> Ver Factura</span>
+                <%}%>
+            </div>
             <br>
             <div class="page-header">
                 <h2>Publicaciones</h2>
@@ -79,5 +105,15 @@
                 </div>
             </div>
         </div>
+        <script>
+            function facturar(nro, proveedor) {
+               var r = confirm("Una vez facturada la reserva, no se podrá revertir el cambio!. Facturar de todas formas?");
+               if (r === true)
+               {
+                   var url = "FacturarReserva?nro=" + nro + "&proveedor=" + proveedor;
+                   window.location = url;
+               }
+            }
+        </script>
     </body>
 </html>
