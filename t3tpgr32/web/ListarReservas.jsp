@@ -4,7 +4,7 @@
     Author     : Bruno González
 --%>
 
-<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.text.DecimalFormat"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.text.Format"%>
 <%@page import="java.util.ArrayList"%>
@@ -24,6 +24,7 @@
             <div class="row">
                 <%
                     List<DataReserva> reservas = (ArrayList) request.getAttribute("reservas");
+                    DecimalFormat decimales = new DecimalFormat("0");
                     if (!(reservas == null)) {
                         if (!reservas.isEmpty()) {%>
                 <div class="col-xs-12 table-responsive">
@@ -34,20 +35,18 @@
                             <td>Fecha Creación</td>
                             <td>Cliente</td>
                             <td>Total</td>
-                            <td>Cantidad Publicaciones</td>
                         </tr>
                         <%
                             for (DataReserva r : reservas) {
                                 Format f = new SimpleDateFormat("dd-MM-yyyy");
                                 String fecha = f.format(r.getCreacion().toGregorianCalendar().getTime());
                         %>
-                        <tr class="reservas" onclick="location.href = 'InfoReserva?nro=<%=r.getNum()%>'">
+                        <tr class="reservas" onclick="location.href='InfoReserva?nro=<%=r.getNum()%>'" >
                             <td><%=r.getNum()%></td>
                             <td><%=r.getEstado().toString()%></td>
                             <td><%=fecha%></td>
                             <td><%=r.getCliente()%></td>
-                            <td><%="$" + r.getPrecioTotal()%></td>
-                            <td><%=r.getDpd().size()%></td>
+                            <td><%="U$S " + decimales.format(r.getPrecioTotal())%></td>
                         </tr><%
                         }%>
                     </table></div><%
