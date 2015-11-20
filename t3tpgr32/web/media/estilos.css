@@ -49,8 +49,15 @@ body{
 }
 
 .ReservasProveedor{
-    width: 80%;
     background: #ffffff;
+}
+
+.InfoReserva{
+    background: #ffffff;
+}
+
+.page-header h2{
+    text-align: center;
 }
 
 img{

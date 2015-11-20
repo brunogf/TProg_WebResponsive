@@ -23,26 +23,32 @@
     </head>
     <body>
         <jsp:include page="WEB-INF/Templates/header.jsp"/>
-        
         <% DataReserva dr = (DataReserva) request.getAttribute("info_reserva_dr");
             List<ParDPD> dpds = dr.getDpd();
             DecimalFormat decimales = new DecimalFormat("0");
         %>
 
         <div class="container InfoReserva">
+            <br>
+            <br>
+            <div class="page-header">
+                <h2>Publicaciones</h2>
+            </div>
+            <%
+                if ((dpds != null)) {
+                    if (!dpds.isEmpty()) {%>
+
             <div class="row">
-                <%
-                    if ((dpds != null)) {
-                        if (!dpds.isEmpty()) {%>
-
-                <div class="col-xs-12 table-responsive">
-                    <table class="table">
-                        <tr class="cabeceraTabla">
-                            <td>Nombre</td>
-                            <td>Tipo</td>
-                            <td>Precio unitario</td>
-                        </tr>
-
+                <div class="col-md-12">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr class="cabeceraTabla">
+                                <td><b>Nombre</b></td>
+                                <td><b>Tipo</b></td>
+                                <td><b>Precio unitario</b></td>
+                            </tr>
+                        </thead>
+                        <tbody>
                         <%
                             for (ParDPD dpd : dpds) {
                                 if (dpd != null) {
@@ -50,7 +56,7 @@
                                     DataDisponibilidad dd = dpd.getDd();
                                     if (dpub instanceof DataServicio) {
                                         DataServicio ds = (DataServicio) dpub;%>
-                        <tr class="publicacion" onclick="location.href = '#'">
+                        <tr class="publicacion">
                             <td><%= ds.getNombre()%></td>
                             <td><%= "Servicio"%></td>
                             <td><%= "U$S " + decimales.format(ds.getPrecio())%></td>
@@ -58,7 +64,7 @@
 
                         <%} else if (dpub instanceof DataPromocion) {
                             DataPromocion dp = (DataPromocion) dpub;%>
-                        <tr class="publicacion" onclick="location.href = '#'">
+                        <tr class="publicacion">
                             <td><%= dp.getNombre()%></td>
                             <td><%= "Promocion"%></td>
                             <td><%= "U$S " + decimales.format(dp.getPrecioTotal())%></td>
@@ -68,6 +74,7 @@
                                     }
                                 }
                             }%>
+                        </tbody>
                     </table>
                 </div>
             </div>

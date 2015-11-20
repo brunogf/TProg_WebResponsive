@@ -21,42 +21,50 @@
         <jsp:include page="WEB-INF/Templates/header.jsp"/>
 
         <div class="container ReservasProveedor">
+            <br>
+            <br>
+            <div class="page-header">
+                <h2>Reservas</h2>
+            </div>
             <div class="row">
                 <%
                     List<DataReserva> reservas = (ArrayList) request.getAttribute("reservas");
                     DecimalFormat decimales = new DecimalFormat("0");
                     if (!(reservas == null)) {
                         if (!reservas.isEmpty()) {%>
-                <div class="col-xs-12 table-responsive">
-                    <table class="table">
-                        <tr class="cabeceraTabla">
-                            <td>#</td>
-                            <td>Estado</td>
-                            <td>Fecha Creación</td>
-                            <td>Cliente</td>
-                            <td>Total</td>
-                        </tr>
-                        <%
-                            for (DataReserva r : reservas) {
-                                Format f = new SimpleDateFormat("dd-MM-yyyy");
-                                String fecha = f.format(r.getCreacion().toGregorianCalendar().getTime());
+                <div class="col-md-12">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr class="cabeceraTabla">
+                                <td><b>#</b></td>
+                                <td><b>Estado</b></td>
+                                <td><b>Fecha Creación</b></td>
+                                <td><b>Cliente</b></td>
+                                <td><b>Total</b></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <%
+                                for (DataReserva r : reservas) {
+                                    Format f = new SimpleDateFormat("dd-MM-yyyy");
+                                    String fecha = f.format(r.getCreacion().toGregorianCalendar().getTime());
+                            %>
+                            <tr style="cursor:pointer"class="reservas" onclick="location.href = 'InfoReserva?nro=<%=r.getNum()%>'" >
+                                <td><%=r.getNum()%></td>
+                                <td><%=r.getEstado().toString()%></td>
+                                <td><%=fecha%></td>
+                                <td><%=r.getCliente()%></td>
+                                <td><%="U$S " + decimales.format(r.getPrecioTotal())%></td>
+                            </tr><%
+                            }%>
+                        </tbody></table></div><%
+                        } else {
                         %>
-                        <tr class="reservas" onclick="location.href='InfoReserva?nro=<%=r.getNum()%>'" >
-                            <td><%=r.getNum()%></td>
-                            <td><%=r.getEstado().toString()%></td>
-                            <td><%=fecha%></td>
-                            <td><%=r.getCliente()%></td>
-                            <td><%="U$S " + decimales.format(r.getPrecioTotal())%></td>
-                        </tr><%
-                        }%>
-                    </table></div><%
-                    } else {
-                    %>
                 <div class="col-xs-12 noResult">
                     <span class="Message">No tienes ninguna reserva</span>
                 </div>
                 <%}
-            } else {%>
+                } else {%>
                 <div class="col-xs-12 noResult">
                     <span class="Message">No tienes ninguna reserva</span>
                 </div>
