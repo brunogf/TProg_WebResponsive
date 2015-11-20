@@ -12,6 +12,7 @@ body{
     background:#E4F3FE;
 }
 
+
 .IniciarSesion .invalid_login_message{
     font-size: 13px;
     color: red;
@@ -53,5 +54,7 @@ body{
 }
 
 img{
-    width: 30%;
+    height: 40%;
+    width: 40%;
 }
+

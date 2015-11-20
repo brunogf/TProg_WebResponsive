@@ -24,55 +24,9 @@
             <br>
             <br>
             <div class="main col-xs-5 col-sm-7 col-md-10">
-            <h1>Home de prueba</h1>
-            <p>asssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaddfdsfasdfasdfasdfasdfsdf
-            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaff
-            edgedfgasfgsdfgsdfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggdsg
-            sadgsadgsaaaaaaaaadsdfgdfgdsfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
-            </p>
-            <p>asssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaddfdsfasdfasdfasdfasdfsdf
-            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaff
-            edgedfgasfgsdfgsdfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggdsg
-            sadgsadgsaaaaaaaaadsdfgdfgdsfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
-            </p>
-            <p>asssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaddfdsfasdfasdfasdfasdfsdf
-            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaff
-            edgedfgasfgsdfgsdfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggdsg
-            sadgsadgsaaaaaaaaadsdfgdfgdsfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
-            </p>
-            <p>asssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaddfdsfasdfasdfasdfasdfsdf
-            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaff
-            edgedfgasfgsdfgsdfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggdsg
-            sadgsadgsaaaaaaaaadsdfgdfgdsfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
-            </p>
-            <p>asssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaddfdsfasdfasdfasdfasdfsdf
-            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaff
-            edgedfgasfgsdfgsdfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggdsg
-            sadgsadgsaaaaaaaaadsdfgdfgdsfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
-            </p>
-            <p>asssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaddfdsfasdfasdfasdfasdfsdf
-            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaff
-            edgedfgasfgsdfgsdfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggdsg
-            sadgsadgsaaaaaaaaadsdfgdfgdsfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
-            </p>
-            <p>asssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaddfdsfasdfasdfasdfasdfsdf
-            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaff
-            edgedfgasfgsdfgsdfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggdsg
-            sadgsadgsaaaaaaaaadsdfgdfgdsfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
-            </p>
-            <p>asssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaddfdsfasdfasdfasdfasdfsdf
-            saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaff
-            edgedfgasfgsdfgsdfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggdsg
-            sadgsadgsaaaaaaaaadsdfgdfgdsfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
-            </p>
+                <br>
+                <br>
+
             </div>
             </div>
         </div>
