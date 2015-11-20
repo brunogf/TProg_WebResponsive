@@ -6,6 +6,7 @@
 package com.h4t.controladores;
 
 import com.h4t.modelo.EstadoSesion;
+import com.h4t.modelo.FabricaWS;
 import com.h4t.servicios.DataPromocion;
 import com.h4t.servicios.DataPublicacion;
 import com.h4t.servicios.DataServicioBean;
@@ -42,7 +43,7 @@ public class InfoPromocion extends HttpServlet {
         if(request.getSession().getAttribute("estado_sesion") == EstadoSesion.LOGGED_IN){
             String promocion = (String)request.getParameter("Promocion");
             String usuario = (String)request.getSession().getAttribute("Usuario");
-            PublicadorControladorPublicacionService service = new PublicadorControladorPublicacionService();
+            PublicadorControladorPublicacionService service = FabricaWS.getInstance().getPublicacionService();
             PublicadorControladorPublicacion port = service.getPublicadorControladorPublicacionPort();
             DataPromocion dtp = port.infoPromocion(usuario, promocion);    
             List<DataServicioBean> Servicios = port.listarServiciosDePromocion(usuario, promocion).getItem();

@@ -6,6 +6,7 @@
 package com.h4t.controladores;
 
 import com.h4t.modelo.EstadoSesion;
+import com.h4t.modelo.FabricaWS;
 import com.h4t.servicios.DataServicioBean;
 import com.h4t.servicios.PublicadorControladorPublicacion;
 import com.h4t.servicios.PublicadorControladorPublicacionService;
@@ -46,7 +47,7 @@ public class InfoServicio extends HttpServlet {
         if(request.getSession().getAttribute("estado_sesion") == EstadoSesion.LOGGED_IN){
             String servicio = (String)request.getParameter("Servicio");
             String usuario = (String)request.getSession().getAttribute("Usuario");
-            PublicadorControladorPublicacionService service = new PublicadorControladorPublicacionService();
+            PublicadorControladorPublicacionService service = FabricaWS.getInstance().getPublicacionService();
             PublicadorControladorPublicacion port = service.getPublicadorControladorPublicacionPort();
             DataServicioBean dts = port.infoServicio(usuario, servicio);
             List<byte[]> imList = dts.getImagenes();

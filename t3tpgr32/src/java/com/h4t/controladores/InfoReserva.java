@@ -40,7 +40,7 @@ public class InfoReserva extends HttpServlet {
 
         if (request.getSession().getAttribute("estado_sesion") == EstadoSesion.LOGGED_IN) {
             String nick = (String) request.getSession().getAttribute("Usuario");
-            PublicadorControladorReservaService servicio = new PublicadorControladorReservaService();
+            PublicadorControladorReservaService servicio = FabricaWS.getInstance().getReservaService();
             PublicadorControladorReserva port = servicio.getPublicadorControladorReservaPort();
             request.setAttribute("info_reserva_dr", port.infoReservaProveedor(nro, nick));
             request.setAttribute("info_reserva_fac", port.obtenerFacturaReserva(nro));

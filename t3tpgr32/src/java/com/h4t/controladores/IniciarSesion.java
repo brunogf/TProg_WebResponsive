@@ -8,6 +8,7 @@ package com.h4t.controladores;
 
 import com.h4t.servicios.PublicadorControladorUsuario;
 import com.h4t.modelo.EstadoSesion;
+import com.h4t.modelo.FabricaWS;
 import com.h4t.servicios.DataCliente;
 import com.h4t.servicios.DataProveedorBean;
 import com.h4t.servicios.DataUsuario;
@@ -39,7 +40,7 @@ public class IniciarSesion extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
-        PublicadorControladorUsuarioService servicio = new PublicadorControladorUsuarioService();
+        PublicadorControladorUsuarioService servicio = FabricaWS.getInstance().getUsuarioService();
         com.h4t.servicios.PublicadorControladorUsuario port = servicio.getPublicadorControladorUsuarioPort();
         
         String usr = request.getParameter("Usuario");

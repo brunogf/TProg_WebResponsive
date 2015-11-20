@@ -6,6 +6,7 @@
 package com.h4t.controladores;
 
 import com.h4t.modelo.EstadoSesion;
+import com.h4t.modelo.FabricaWS;
 import com.h4t.servicios.DataReserva;
 import com.h4t.servicios.DataReservaArray;
 import com.h4t.servicios.PublicadorControladorUsuarioService;
@@ -37,7 +38,7 @@ public class ReservasProveedor extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        PublicadorControladorUsuarioService servicio = new PublicadorControladorUsuarioService();
+        PublicadorControladorUsuarioService servicio = FabricaWS.getInstance().getUsuarioService();
         com.h4t.servicios.PublicadorControladorUsuario port = servicio.getPublicadorControladorUsuarioPort();
 
         if (request.getSession().getAttribute("estado_sesion") == EstadoSesion.LOGGED_IN) {

@@ -5,6 +5,7 @@
  */
 package com.h4t.controladores;
 
+import com.h4t.modelo.FabricaWS;
 import com.h4t.servicios.PublicadorControladorReserva;
 import com.h4t.servicios.PublicadorControladorReservaService;
 import java.io.IOException;
@@ -36,7 +37,7 @@ public class FacturarReserva extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         String nro = request.getParameter("nro");
         String proveedor = request.getParameter("proveedor");
-        PublicadorControladorReservaService service = new PublicadorControladorReservaService();
+        PublicadorControladorReservaService service = FabricaWS.getInstance().getReservaService();
         PublicadorControladorReserva port = service.getPublicadorControladorReservaPort();
         try{
             int numero = Integer.parseInt(nro);
