@@ -45,7 +45,6 @@ public class InfoReserva extends HttpServlet {
             request.setAttribute("info_reserva_dr", port.infoReservaProveedor(nro, nick));
             request.setAttribute("info_reserva_fac", port.obtenerFacturaReserva(nro));
             request.setAttribute("proveedor_facturo", port.proveedorFacturoReserva(nick, nro));
-            request.setAttribute("urlt2", FabricaWS.getInstance().getT2URL());
             request.getRequestDispatcher("/InfoReserva.jsp").forward(request, response);
         }else{
             response.sendRedirect("");

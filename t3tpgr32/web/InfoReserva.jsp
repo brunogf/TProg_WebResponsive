@@ -50,8 +50,7 @@
                 <span> - </span>
                 <span class="btn-link facturarReserva" onclick="facturar(<%=dr.getNum()%>,'<%=request.getSession().getAttribute("Usuario")%>')"> Facturar</span>
                 <%}else if((dr.getEstado() == Estado.FACTURADA) && !((Boolean)request.getAttribute("proveedor_facturo")) && ((Integer)request.getAttribute("info_reserva_fac") != -1)){ %>
-                <%String str = (String)request.getAttribute("urlt2");
-                str = str +"/VerFactura?id=" + request.getAttribute("info_reserva_fac");%>
+                <%String str = "VerFactura?id=" + request.getAttribute("info_reserva_fac");%>
                 <span> - </span>
                 <span class="btn-link facturarReserva" onclick='window.open("<%=str%>")'> Ver Factura</span>
                 <%}%>
