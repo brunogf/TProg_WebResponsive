@@ -2,9 +2,9 @@
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
   <services/>
   <clients>
-    <client name="controlador_usuario">
-      <wsdl-url>http://localhost:9128/controlador_usuario?wsdl</wsdl-url>
-      <local-wsdl-file>localhost_9128/controlador_usuario.wsdl</local-wsdl-file>
+    <client name="controlador_publicacion">
+      <wsdl-url>http://localhost:9128/controlador_publicacion?wsdl</wsdl-url>
+      <local-wsdl-file>localhost_9128/controlador_publicacion.wsdl</local-wsdl-file>
       <package-name forceReplace="true">com.h4t.servicios</package-name>
       <catalog-file>catalog.xml</catalog-file>
       <wsimport-options>
@@ -22,7 +22,7 @@
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://localhost:9128/controlador_usuario?wsdl</wsimport-option-value>
+          <wsimport-option-value>http://localhost:9128/controlador_publicacion?wsdl</wsimport-option-value>
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>xnocompile</wsimport-option-name>
@@ -74,9 +74,9 @@
         </wsimport-option>
       </wsimport-options>
     </client>
-    <client name="controlador_publicacion">
-      <wsdl-url>http://localhost:9128/controlador_publicacion?wsdl</wsdl-url>
-      <local-wsdl-file>localhost_9128/controlador_publicacion.wsdl</local-wsdl-file>
+    <client name="controlador_usuario">
+      <wsdl-url>http://localhost:9128/controlador_usuario?wsdl</wsdl-url>
+      <local-wsdl-file>localhost_9128/controlador_usuario.wsdl</local-wsdl-file>
       <package-name forceReplace="true">com.h4t.servicios</package-name>
       <catalog-file>catalog.xml</catalog-file>
       <wsimport-options>
@@ -94,7 +94,7 @@
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://localhost:9128/controlador_publicacion?wsdl</wsimport-option-value>
+          <wsimport-option-value>http://localhost:9128/controlador_usuario?wsdl</wsimport-option-value>
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>xnocompile</wsimport-option-name>
