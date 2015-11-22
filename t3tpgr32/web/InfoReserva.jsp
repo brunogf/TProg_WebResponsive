@@ -49,10 +49,13 @@
                 <%if((dr.getEstado() == Estado.PAGADA) && !((Boolean)request.getAttribute("proveedor_facturo"))){%>
                 <span> - </span>
                 <span class="btn-link facturarReserva" onclick="facturar(<%=dr.getNum()%>,'<%=request.getSession().getAttribute("Usuario")%>')"> Facturar</span>
-                <%}else if((dr.getEstado() == Estado.FACTURADA) && !((Boolean)request.getAttribute("proveedor_facturo")) && ((Integer)request.getAttribute("info_reserva_fac") != -1)){ %>
+                <%}else if((dr.getEstado() == Estado.FACTURADA) && ((Integer)request.getAttribute("info_reserva_fac") != -1)){ %>
                 <%String str = "VerFactura?id=" + request.getAttribute("info_reserva_fac");%>
                 <span> - </span>
                 <span class="btn-link facturarReserva" onclick='window.open("<%=str%>")'> Ver Factura</span>
+                <%}else if((Boolean)request.getAttribute("proveedor_facturo")){%>
+                <span> - </span>
+                <span> (Esperando por los otros proveedores para completar la facturación) </span>
                 <%}%>
             </div>
             <br>

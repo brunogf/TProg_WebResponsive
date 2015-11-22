@@ -5,6 +5,7 @@
  */
 package com.h4t.controladores;
 
+import com.h4t.modelo.EstadoSesion;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -32,7 +33,11 @@ public class Inicio extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         //Por ahora solo se usa para redireccionar a IniciarSesion.jsp
-        request.getRequestDispatcher("IniciarSesion.jsp").forward(request, response);
+        EstadoSesion est = (EstadoSesion)request.getSession().getAttribute("estado_sesion");
+        if ((est != null) && (est.equals(EstadoSesion.LOGGED_IN)))
+            response.sendRedirect("Home.jsp");
+        else
+            request.getRequestDispatcher("IniciarSesion.jsp").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

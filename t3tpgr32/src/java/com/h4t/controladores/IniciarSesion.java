@@ -56,7 +56,7 @@ public class IniciarSesion extends HttpServlet {
                   request.getSession().setAttribute("estado_sesion", EstadoSesion.LOGGED_IN);
                   String nombre = du.getNombre() + " " + du.getApellido();
                   request.getSession().setAttribute("Nombre", nombre);              
-                  request.getRequestDispatcher("Home.jsp").forward(request, response);
+                  response.sendRedirect("Home.jsp");
                   }
                 else{
                     request.getSession().setAttribute("estado_sesion", EstadoSesion.INVALID_LOGIN);

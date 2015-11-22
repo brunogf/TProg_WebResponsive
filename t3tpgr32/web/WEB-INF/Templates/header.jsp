@@ -33,6 +33,7 @@
                         <li><a href="ReservasProveedor">Reservas</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
+                        <li><a href='Home.jsp'>Logged as: <%=request.getSession().getAttribute("Nombre")%></a></li>
                         <li><a href="CerrarSesion">Cerrar Sesion</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
