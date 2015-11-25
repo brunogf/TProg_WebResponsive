@@ -14,22 +14,24 @@
         <jsp:include page="WEB-INF/Templates/head.jsp"/>
     </head>
     <body>
+        <jsp:include page="WEB-INF/Templates/header.jsp"/>
         <div class="container infoServicio">
-            <div class="row">
-                    <jsp:include page="WEB-INF/Templates/header.jsp"/>
-            </div>
             <%DataServicioBean info_servicio = (DataServicioBean) request.getAttribute("info_servicio");
             String imagen0 = (String)request.getAttribute("imagen0");
             String imagen1 = (String)request.getAttribute("imagen1");
             String imagen2 = (String)request.getAttribute("imagen2");%>
-                <br/>
-                <br/>
-                <h3>Información del servicio</h3>
-                <label>Nombre:</label><%=info_servicio.getNombre()%>
-                <br/>
-                <br/>
-                <label>Descripcion:</label><%=info_servicio.getDescripcion()%>
-                <br/>
+            <div class="row">
+            <div class="col-md-12">
+                <br>
+                <br>
+                <div class="page-header">
+                    <h2><b>Informacion del servicio</b></h2>
+                </div>
+                <label><b>Nombre:</b></label><%=info_servicio.getNombre()%>
+                <br>
+                <br>
+                <label><b>Descripcion:</b></label><%=info_servicio.getDescripcion()%>
+                <br>
                 <% if (imagen0 != null){ %>
                     <img class="imagen0" src="<%=imagen0%>" width="300px" height="200px" alt="Imagen Servicio"><%;
                 }%>
@@ -39,6 +41,8 @@
                 <% if (imagen2 != null){ %>
                     <img class="imagen2"src="<%=imagen2%>" width="300px" height="200px" alt="Imagen Servicio"><%;
                 }%>
+            </div>
+            </div>
         </div>
     </body>
 </html>

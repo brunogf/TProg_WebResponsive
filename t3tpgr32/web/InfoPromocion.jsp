@@ -16,21 +16,22 @@
         <jsp:include page="WEB-INF/Templates/head.jsp"/>
     </head>
     <body>
+        <jsp:include page="WEB-INF/Templates/header.jsp"/>
         <div class="container infoPromocion">
-            <div class="row">
-                    <jsp:include page="WEB-INF/Templates/header.jsp"/>
-                    <br>
-                    <br>
-                    <h3>Información de la promocion</h3>
-            </div>
-            <%DataPromocion info_promocion = (DataPromocion) request.getAttribute("info_promocion");%>
-                <br/>
+            <div class="col-md-12">                 
+                <br>
+                <br>
+                <div class="page-header">
+                <h2>Informacion de la promocion</h2>
+                </div>           
+                <%DataPromocion info_promocion = (DataPromocion) request.getAttribute("info_promocion");%>
+                <br>
                 <label>Nombre:</label><%=info_promocion.getNombre()%>
-                <br/>
-                <h4>Servicios de la promoción</h4> 
-                <table class="table">
+                <br>
+                <h4><b>Servicios de la promoción</b></h4> 
+                <table class="table table-bordered">
                     <tr class="cabeceraTabla">
-                        <td>Nombre</td>                                  
+                        <td><b>Nombre</b></td>                                  
                     </tr>  
                     <%Set<DataServicioBean> Servicios =(HashSet) request.getAttribute("servicios_de_promocion");%>
                     <%
@@ -39,12 +40,13 @@
                         String link;
                         for (DataServicioBean ds : Servicios){
                             link = "InfoServicio?Servicio=" + ds.getNombre();%>
-                            <tr class="result" onclick="location.href='<%=link%>'">
+                            <tr style="cursor:pointer" class="result" onclick="location.href='<%=link%>'">
                             <td><%=ds.getNombre()%></td>
                             </tr>
                         <%}
                     }%>
                 </table>
-        </div>
+            </div>
+        </div>        
     </body>
 </html>

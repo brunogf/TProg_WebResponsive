@@ -26,7 +26,9 @@
             <div class="main col-xs-5 col-sm-7 col-md-10">
                 <br>
                 <br>
-
+                <div class="col-xs-offset-7">
+                    <img src="http://www.gifsanimados.org/data/media/71/avion-imagen-animada-0119.gif" border="0" alt="avion-imagen-animada-0119"/></a>
+                </div>
             </div>
             </div>
         </div>

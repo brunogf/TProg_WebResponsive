@@ -15,18 +15,19 @@
         <jsp:include page="WEB-INF/Templates/head.jsp"/>
     </head>
     <body>
-        <div class="container Promociones">
-            <div class="row">
-                <jsp:include page="WEB-INF/Templates/header.jsp"/>
-            </div>            
+        <jsp:include page="WEB-INF/Templates/header.jsp"/>
+        <div class="container Promociones">                   
             <div class="row">
             <br>
             <br>
+            <div class="page-header">
+                <h2>Promociones</h2>
+            </div>
             <br>
-            <div class="main col-xs-5 col-sm-7 col-md-10">
-                <table class="table">
+            <div class="col-md-12">
+                <table class="table table-bordered">
                                 <tr class="cabeceraTabla">
-                                    <td>Nombre</td>                                  
+                                    <td><b>Nombre<b></td>                                  
                                 </tr>  
                 <%Set<DataPublicacion> Promociones =(HashSet) request.getAttribute("Promociones");%>
                 <%
@@ -35,7 +36,7 @@
                     String link;
                     for (DataPublicacion ds : Promociones){
                         link = "InfoPromocion?Promocion=" + ds.getNombre();%>
-                        <tr class="result" onclick="location.href='<%=link%>'">
+                        <tr style="cursor:pointer" class="result" onclick="location.href='<%=link%>'">
                         <td><%=ds.getNombre()%></td>
                         </tr>
                     <%}

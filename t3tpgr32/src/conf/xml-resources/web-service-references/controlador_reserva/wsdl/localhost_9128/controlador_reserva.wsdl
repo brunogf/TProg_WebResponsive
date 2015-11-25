@@ -18,12 +18,6 @@
 <message name="infoReservaResponse">
 <part name="return" type="tns:dataReserva"></part>
 </message>
-<message name="obtenerFactura">
-<part name="arg0" type="xsd:int"></part>
-</message>
-<message name="obtenerFacturaResponse">
-<part name="return" type="xsd:base64Binary"></part>
-</message>
 <message name="facturarReserva">
 <part name="arg0" type="xsd:string"></part>
 <part name="arg1" type="xsd:int"></part>
@@ -31,11 +25,18 @@
 <message name="facturarReservaResponse">
 <part name="return" type="xsd:int"></part>
 </message>
-<message name="obtenerFacturaReserva">
+<message name="obtenerFactura">
 <part name="arg0" type="xsd:int"></part>
 </message>
-<message name="obtenerFacturaReservaResponse">
-<part name="return" type="xsd:int"></part>
+<message name="obtenerFacturaResponse">
+<part name="return" type="xsd:base64Binary"></part>
+</message>
+<message name="infoReservaProveedor">
+<part name="arg0" type="xsd:int"></part>
+<part name="arg1" type="xsd:string"></part>
+</message>
+<message name="infoReservaProveedorResponse">
+<part name="return" type="tns:dataReserva"></part>
 </message>
 <message name="cambiarFechaCreacionReserva">
 <part name="arg0" type="xsd:string"></part>
@@ -45,12 +46,11 @@
 <message name="ParseException">
 <part name="fault" element="tns:ParseException"></part>
 </message>
-<message name="infoReservaProveedor">
+<message name="obtenerFacturaReserva">
 <part name="arg0" type="xsd:int"></part>
-<part name="arg1" type="xsd:string"></part>
 </message>
-<message name="infoReservaProveedorResponse">
-<part name="return" type="tns:dataReserva"></part>
+<message name="obtenerFacturaReservaResponse">
+<part name="return" type="xsd:int"></part>
 </message>
 <message name="proveedorFacturoReserva">
 <part name="arg0" type="xsd:string"></part>
@@ -82,26 +82,26 @@
 <input wsam:Action="http://Servidor/PublicadorControladorReserva/infoReservaRequest" message="tns:infoReserva"></input>
 <output wsam:Action="http://Servidor/PublicadorControladorReserva/infoReservaResponse" message="tns:infoReservaResponse"></output>
 </operation>
-<operation name="obtenerFactura">
-<input wsam:Action="http://Servidor/PublicadorControladorReserva/obtenerFacturaRequest" message="tns:obtenerFactura"></input>
-<output wsam:Action="http://Servidor/PublicadorControladorReserva/obtenerFacturaResponse" message="tns:obtenerFacturaResponse"></output>
-</operation>
 <operation name="facturarReserva" parameterOrder="arg0 arg1">
 <input wsam:Action="http://Servidor/PublicadorControladorReserva/facturarReservaRequest" message="tns:facturarReserva"></input>
 <output wsam:Action="http://Servidor/PublicadorControladorReserva/facturarReservaResponse" message="tns:facturarReservaResponse"></output>
 </operation>
-<operation name="obtenerFacturaReserva">
-<input wsam:Action="http://Servidor/PublicadorControladorReserva/obtenerFacturaReservaRequest" message="tns:obtenerFacturaReserva"></input>
-<output wsam:Action="http://Servidor/PublicadorControladorReserva/obtenerFacturaReservaResponse" message="tns:obtenerFacturaReservaResponse"></output>
+<operation name="obtenerFactura">
+<input wsam:Action="http://Servidor/PublicadorControladorReserva/obtenerFacturaRequest" message="tns:obtenerFactura"></input>
+<output wsam:Action="http://Servidor/PublicadorControladorReserva/obtenerFacturaResponse" message="tns:obtenerFacturaResponse"></output>
+</operation>
+<operation name="infoReservaProveedor" parameterOrder="arg0 arg1">
+<input wsam:Action="http://Servidor/PublicadorControladorReserva/infoReservaProveedorRequest" message="tns:infoReservaProveedor"></input>
+<output wsam:Action="http://Servidor/PublicadorControladorReserva/infoReservaProveedorResponse" message="tns:infoReservaProveedorResponse"></output>
 </operation>
 <operation name="cambiarFechaCreacionReserva" parameterOrder="arg0 arg1">
 <input wsam:Action="http://Servidor/PublicadorControladorReserva/cambiarFechaCreacionReservaRequest" message="tns:cambiarFechaCreacionReserva"></input>
 <output wsam:Action="http://Servidor/PublicadorControladorReserva/cambiarFechaCreacionReservaResponse" message="tns:cambiarFechaCreacionReservaResponse"></output>
 <fault message="tns:ParseException" name="ParseException" wsam:Action="http://Servidor/PublicadorControladorReserva/cambiarFechaCreacionReserva/Fault/ParseException"></fault>
 </operation>
-<operation name="infoReservaProveedor" parameterOrder="arg0 arg1">
-<input wsam:Action="http://Servidor/PublicadorControladorReserva/infoReservaProveedorRequest" message="tns:infoReservaProveedor"></input>
-<output wsam:Action="http://Servidor/PublicadorControladorReserva/infoReservaProveedorResponse" message="tns:infoReservaProveedorResponse"></output>
+<operation name="obtenerFacturaReserva">
+<input wsam:Action="http://Servidor/PublicadorControladorReserva/obtenerFacturaReservaRequest" message="tns:obtenerFacturaReserva"></input>
+<output wsam:Action="http://Servidor/PublicadorControladorReserva/obtenerFacturaReservaResponse" message="tns:obtenerFacturaReservaResponse"></output>
 </operation>
 <operation name="proveedorFacturoReserva" parameterOrder="arg0 arg1">
 <input wsam:Action="http://Servidor/PublicadorControladorReserva/proveedorFacturoReservaRequest" message="tns:proveedorFacturoReserva"></input>
@@ -139,15 +139,6 @@
 <soap:body use="literal" namespace="http://Servidor/"></soap:body>
 </output>
 </operation>
-<operation name="obtenerFactura">
-<soap:operation soapAction=""></soap:operation>
-<input>
-<soap:body use="literal" namespace="http://Servidor/"></soap:body>
-</input>
-<output>
-<soap:body use="literal" namespace="http://Servidor/"></soap:body>
-</output>
-</operation>
 <operation name="facturarReserva">
 <soap:operation soapAction=""></soap:operation>
 <input>
@@ -157,7 +148,16 @@
 <soap:body use="literal" namespace="http://Servidor/"></soap:body>
 </output>
 </operation>
-<operation name="obtenerFacturaReserva">
+<operation name="obtenerFactura">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Servidor/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Servidor/"></soap:body>
+</output>
+</operation>
+<operation name="infoReservaProveedor">
 <soap:operation soapAction=""></soap:operation>
 <input>
 <soap:body use="literal" namespace="http://Servidor/"></soap:body>
@@ -178,7 +178,7 @@
 <soap:fault name="ParseException" use="literal"></soap:fault>
 </fault>
 </operation>
-<operation name="infoReservaProveedor">
+<operation name="obtenerFacturaReserva">
 <soap:operation soapAction=""></soap:operation>
 <input>
 <soap:body use="literal" namespace="http://Servidor/"></soap:body>

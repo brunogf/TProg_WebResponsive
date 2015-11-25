@@ -49,7 +49,7 @@
                                     Format f = new SimpleDateFormat("dd-MM-yyyy");
                                     String fecha = f.format(r.getCreacion().toGregorianCalendar().getTime());
                             %>
-                            <tr style="cursor:pointer"class="reservas" onclick="location.href = 'InfoReserva?nro=<%=r.getNum()%>'" >
+                            <tr style="cursor:pointer" class="reservas" onclick="location.href = 'InfoReserva?nro=<%=r.getNum()%>'" >
                                 <td><%=r.getNum()%></td>
                                 <td><%=r.getEstado().toString()%></td>
                                 <td><%=fecha%></td>
