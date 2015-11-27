@@ -28,8 +28,8 @@
     </target>
     <target name="wsimport-client-controlador_publicacion" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/controlador_publicacion"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/controlador_publicacion" destdir="${build.generated.dir}/jax-wsCache/controlador_publicacion" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/controlador_publicacion/wsdl/localhost_9128/controlador_publicacion.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:9128/controlador_publicacion?wsdl" xnocompile="true" xendorsed="true" package="com.h4t.servicios">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/controlador_publicacion/wsdl/localhost_9128/controlador_publicacion.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/controlador_publicacion" destdir="${build.generated.dir}/jax-wsCache/controlador_publicacion" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/controlador_publicacion/wsdl/164.73.44.98_9128/controlador_publicacion.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://164.73.44.98:9128/controlador_publicacion?wsdl" xnocompile="true" xendorsed="true" package="com.h4t.servicios">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/controlador_publicacion/wsdl/164.73.44.98_9128/controlador_publicacion.wsdl"/>
             <produces dir="${build.generated.dir}/jax-wsCache/controlador_publicacion"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
@@ -44,8 +44,8 @@
     </target>
     <target name="wsimport-client-controlador_reserva" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/controlador_reserva"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/controlador_reserva" destdir="${build.generated.dir}/jax-wsCache/controlador_reserva" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/controlador_reserva/wsdl/localhost_9128/controlador_reserva.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:9128/controlador_reserva?wsdl" xnocompile="true" xendorsed="true" package="com.h4t.servicios">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/controlador_reserva/wsdl/localhost_9128/controlador_reserva.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/controlador_reserva" destdir="${build.generated.dir}/jax-wsCache/controlador_reserva" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/controlador_reserva/wsdl/164.73.44.98_9128/controlador_reserva.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://164.73.44.98:9128/controlador_reserva?wsdl" xnocompile="true" xendorsed="true" package="com.h4t.servicios">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/controlador_reserva/wsdl/164.73.44.98_9128/controlador_reserva.wsdl"/>
             <produces dir="${build.generated.dir}/jax-wsCache/controlador_reserva"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
@@ -60,8 +60,8 @@
     </target>
     <target name="wsimport-client-controlador_usuario" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/controlador_usuario"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/controlador_usuario" destdir="${build.generated.dir}/jax-wsCache/controlador_usuario" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/controlador_usuario/wsdl/localhost_9128/controlador_usuario.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:9128/controlador_usuario?wsdl" xnocompile="true" xendorsed="true" package="com.h4t.servicios">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/controlador_usuario/wsdl/localhost_9128/controlador_usuario.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/controlador_usuario" destdir="${build.generated.dir}/jax-wsCache/controlador_usuario" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/controlador_usuario/wsdl/164.73.44.98_9128/controlador_usuario.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://164.73.44.98:9128/controlador_usuario?wsdl" xnocompile="true" xendorsed="true" package="com.h4t.servicios">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/controlador_usuario/wsdl/164.73.44.98_9128/controlador_usuario.wsdl"/>
             <produces dir="${build.generated.dir}/jax-wsCache/controlador_usuario"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
