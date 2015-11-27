@@ -84,7 +84,7 @@
                                     DataDisponibilidad dd = dpd.getDd();
                                     if (dpub instanceof DataServicio) {
                                         DataServicio ds = (DataServicio) dpub;%>
-                        <tr class="publicacion">
+                        <tr class="publicacion" onclick="location.href='InfoServicio?Servicio=<%=ds.getNombre()%>'">
                             <td><%= ds.getNombre()%></td>
                             <td><%= "Servicio"%></td>
                             <td><%= "U$S " + decimales.format(ds.getPrecio())%></td>
@@ -92,7 +92,7 @@
 
                         <%} else if (dpub instanceof DataPromocion) {
                             DataPromocion dp = (DataPromocion) dpub;%>
-                        <tr class="publicacion">
+                        <tr class="publicacion" onclick="location.href='InfoPromocion?Promocion=<%=dp.getNombre()%>'">
                             <td><%= dp.getNombre()%></td>
                             <td><%= "Promocion"%></td>
                             <td><%= "U$S " + decimales.format(dp.getPrecioTotal())%></td>
